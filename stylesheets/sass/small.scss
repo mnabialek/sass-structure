@@ -1,0 +1,41 @@
+@import "vendor/normalize";
+@import "base/init_base";
+
+
+$site-font-size: $mobile_font_size;
+
+html {
+    font-size: $site-font-size;    
+    background: #fff
+}
+.wrapper {
+    width: 95%;    
+    margin: calculateRemSize(1,$site-font-size) auto;
+    margin: 0 auto;
+} 
+header {
+    text-align: center;    
+}
+
+h1 {    
+    @include rem-font-size(2); 
+    span {
+        display: block;    
+        @include rem-font-size(1.5);        
+    }
+}
+
+
+p {
+    text-align: justify;
+    @include hyphens(auto); 
+    line-height: 2.5;
+}
+
+a {
+    color: #000;    
+}
+a:hover {
+    color: #9e3333;
+    
+}

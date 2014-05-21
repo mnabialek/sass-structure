@@ -1,0 +1,10 @@
+main .info {
+  background: #fffff5;
+  border: 1px solid #fffacf;
+
+  @include border-radius(6px);
+  text-indent: 0;
+  width: 52em;
+  padding: 1em;
+  text-align: center;
+}

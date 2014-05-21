@@ -1,0 +1,11 @@
+@include font-face('Merriwea', 'merriweathersans-bold-webfont', bold, normal, false);
+@include font-face('Merriwea', 'merriweathersans-regular-webfont', normal, normal, false);
+@include font-face('Montez', 'montez-regular-webfont', normal, normal);
+
+h1 {
+   font-family: "Merriwea", Arial, sans-serif;
+}
+
+article footer em {
+  font-family: "Montez", Arial, sans-serif;
+}

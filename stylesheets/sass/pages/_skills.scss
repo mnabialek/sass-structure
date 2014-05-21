@@ -1,0 +1,41 @@
+.skills {
+  @extends %clearfix;
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 20px;
+
+  .stars {
+    float: left;
+  }
+  .rating {
+    float: left;
+    margin: 0 3em 0 0.5em;
+    width: 3em;
+    text-align: right;
+  }
+
+  li {
+    clear: left;
+    vertical-align: middle;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  img {
+    vertical-align: middle;
+    float: left;
+  }
+}
+
+.future {
+  list-style: disc;
+  color: #1B75BC !important;
+  line-height: 1.1;
+  padding-left: 35px;
+  li {
+
+    clear: none;
+  }
+  li span {
+    color: #000;
+  }
+}

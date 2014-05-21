@@ -1,0 +1,105 @@
+form {
+  margin-top: 4em;
+  div {
+    float: left;
+    padding: 0 0 1.5em 0;
+    width: 44em;
+    position: relative;
+  }
+  label {
+    width: 14em;
+    float: left;
+    text-align: right;
+    margin-right: 1em;
+
+    em {
+      color: #f00;
+      position: absolute;
+      right: 0;
+      top: 0.5em;
+      font-weight: bold;
+    }
+  }
+  input, textarea {
+    float: left;
+    width: 25em;
+    border-top: 1px solid #999;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #cfcfcf;
+    border-left: 1px solid #cfcfcf;
+    @include box-shadow(inset -2px 1px 2px 2px rgba(0, 0, 0, 0.1));
+    @include border-radius(3px);
+    padding: 0.3em 2em 0.3em 0.3em;
+  }
+  textarea {
+    height: 10em;
+    resize: none;
+  }
+  input:focus, textarea:focus {
+    background-color: #fffacf;
+
+  }
+
+  input[type="submit"] {
+    float: none;
+    width: auto;
+    text-align: center;
+    background: #1B75BC;
+    padding: 0.4em 1em;
+    border: none;
+    @include border-radius(5px);
+    @include box-shadow(none);
+    color: #fff;
+    font-size: 1.1em;
+  }
+
+  input:focus:required:invalid,  textarea:focus:required:invalid, input.error,  textarea.error {
+    border: 1px solid #f00;
+    background: #fffacf image_url('invalid.png') 98% center no-repeat;
+  }
+  input:focus:required:valid   {
+    border: 1px solid #82B81F;
+    background: #fffacf image_url('valid.png') 98% center no-repeat;
+  }
+
+  input.error:focus:required:valid, textarea.error:focus:required   {
+    background-image: none;
+    border-color: #fff;
+  }
+
+
+
+
+  div.submit {
+    margin-left: 16em;
+    text-align: center;
+    width: 26em;
+  }
+  @extend %clearfix;
+
+  div.errors, div.success {
+    background: #f9e7ea;
+    border: 1px solid #f00;
+    @include border-radius(5px);
+    float: none;
+    margin-bottom: 2em;
+    width: 36em;
+    margin-left: 10em;
+    padding: 0;
+  }
+  div.errors p, div.success p {
+    margin: 0.25em;
+    text-align: center;
+    color: #f00;
+    padding: 0;
+  }
+  div.success {
+    background: #eefbd6;
+    border-color:  #7bb80c;
+    p {
+      color: #7bb80c;
+      font-weight: bold;
+    }
+  }
+
+}

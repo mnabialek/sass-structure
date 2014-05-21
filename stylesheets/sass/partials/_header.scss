@@ -1,0 +1,60 @@
+header {
+  background: #F9F9F9;
+  width: 100%;
+  @include box-shadow(#aaa 1px 1px 10px);
+  padding: 10px 0;
+
+  .wrapper {
+    position: relative;
+    @extend %clearfix;
+  }
+
+  img.logo {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .flags {
+    position: absolute;
+    top: 0;
+    right: 8px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @extend %clearfix;
+    }
+
+    li {
+      float: left;
+      margin: 0 0 0 20px;
+      padding: 0;
+    }
+
+    a {
+      @include opacity(0.4);
+
+      &:hover, &.selected {
+        @include opacity(1);
+      }
+
+      img {
+        display: block;
+      }
+    }
+  }
+
+  h1 {
+    @include rem-font-size(2.3);
+    margin: 0;
+    @include rem-margin-top(0.8);
+
+    span {
+      @include rem-font-size(1.4);
+      color: #000;
+    }
+    float: left;
+    color: #196bab;
+  }
+}

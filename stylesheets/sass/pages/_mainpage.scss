@@ -1,0 +1,6 @@
+article footer em {
+  @include rem-font-size(2.2);
+  display: block;
+  letter-spacing: 2px;
+  padding-top: 15px;
+}

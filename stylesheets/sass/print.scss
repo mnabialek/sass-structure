@@ -1,0 +1,29 @@
+html {
+    background: #fff;
+}
+body {
+    background: #fff;    
+}
+h1 {
+    font-size: 20pt; 
+    
+    span {
+        font-size: 16pt;
+        margin-top: 10pt;    
+        margin-bottom: 20pt;                
+    }   
+}
+
+p {
+    font-size: 11pt;
+    
+}
+a {
+    text-decoration: none;
+    font-style: italic;    
+    font-weight: bold;
+    color: #06c;
+}
+a:after {
+    content: " ( " attr(href) " )";
+}

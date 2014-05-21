@@ -1,0 +1,38 @@
+@import "compass/css3";
+
+@mixin font-face($font-family, $font-filename, $font-weight: normal, $font-style: normal, $svg: true) {
+@font-face {
+    font-family: '#{$font-family}'; 
+    src: font-url('#{$font-filename}.eot'); 
+    @if $svg == true {
+    src: font-url('#{$font-filename}.eot?#iefix') format('embedded-opentype'), 
+    font-url('#{$font-filename}.woff') format('woff'), 
+    font-url('#{$font-filename}.ttf') format('truetype'),     
+    font-url('#{$font-filename}.svg#webfont') format('svg');     
+    }
+    @else {
+    src: font-url('#{$font-filename}.eot?#iefix') format('embedded-opentype'), 
+    font-url('#{$font-filename}.woff') format('woff'), 
+    font-url('#{$font-filename}.ttf') format('truetype');    
+    }
+    font-weight: $font-weight;
+    font-style: $font-style; 
+}
+}
+
+@mixin rem-size($property, $size) {    
+    #{$property}: calculateRemSize($size,$site-font-size);
+    #{$property}: unquote($size + 'rem');
+}
+
+@mixin rem-font-size($size) {
+    @include rem-size('font-size',$size);
+}
+
+@mixin rem-width($size) {
+    @include rem-size('width',$size);
+}
+
+@mixin rem-margin-top($size) {
+    @include rem-size('margin-top',$size);
+}

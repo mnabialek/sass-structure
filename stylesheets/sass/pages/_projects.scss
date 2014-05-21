@@ -1,0 +1,34 @@
+.projects {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 2em;
+
+  img {
+    @include box-shadow(0 0px 4px rgba(0, 0, 0, 0.2));
+    display: block;
+    margin: 0 0 0.5em 0;
+    max-width: 64rem;
+  }
+
+  h3 {
+    color: #1B75BC;
+    font-size: 120%;
+    margin: 0 0 0.5em 0;
+  }
+  li {
+    margin-bottom: 2em;
+
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  em {
+    color: #f00;
+    padding-left: 5em;
+  }
+}

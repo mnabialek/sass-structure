@@ -1,0 +1,61 @@
+@import "base/_init";
+
+$site-font-size: $large_font_size;
+
+@import 'pages/projects';
+@import 'pages/skills';
+@import 'pages/contact';
+@import 'pages/job';
+@import 'pages/mainpage';
+@import 'pages/contact';
+@import 'partials/header';
+@import 'partials/nav';
+@import 'partials/footer';
+
+html {
+    font-size: $site-font-size;
+}
+
+
+.wrapper, main {
+  @include rem-width(68);
+
+}
+main {
+  text-align: left;
+  margin: 40px auto;
+  text-align: left;
+  p {
+    text-indent: 1em;
+    line-height: 2.25;
+  }
+  h2 {
+    border-bottom: 1px solid #125a93;
+    color: #125a93;
+    @include rem-font-size(1.2);
+    padding-bottom: 6px;
+    text-indent: 20px;
+    width: 500px;
+  }
+}
+
+
+
+article {
+  footer {
+    text-align: right;
+    font-style: italic;
+  }
+}
+
+
+
+.me {
+  float: right;
+  margin:  20px 0 20px 40px;
+  @include box-shadow(-1px -1px 5px 4px #ccc);
+  @include border-radius(5px);
+  height: 200px;
+}
+
+
